@@ -1,11 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Home = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Home</Text>
-    </View>
+      <Icon name="star-outline" size={30} />
+    </SafeAreaView>
   );
 };
 
