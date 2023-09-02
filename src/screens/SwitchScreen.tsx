@@ -1,4 +1,4 @@
-import {Platform, StyleSheet, Switch, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import HeaderTitle from '../components/HeaderTitle';
 import CustomSwitch from '../components/CustomSwitch';
