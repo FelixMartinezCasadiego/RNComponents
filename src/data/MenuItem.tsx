@@ -37,8 +37,13 @@ export const menuItems: MenuItems[] = [
     component: 'SectionListScreen',
   },
   {
-    name: 'Modal Screen ',
+    name: 'Modal',
     icon: 'copy-outline',
     component: 'ModalScreen',
+  },
+  {
+    name: 'Infinite scroll',
+    icon: 'download-outline',
+    component: 'InfiniteScrollScreen',
   },
 ];
