@@ -1,8 +1,12 @@
 import {Animated, Button, Easing, StyleSheet, Text, View} from 'react-native';
-import React, {useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import {ThemeContext} from '../context/themeContext/ThemeContext';
 
 const Animation101Screen = () => {
+  const {
+    theme: {colors},
+  } = useContext(ThemeContext);
   const opacity: Animated.Value = useRef(new Animated.Value(0)).current;
   const position: Animated.Value = useRef(new Animated.Value(0)).current;
   const fadeIn = () => {
@@ -36,6 +40,7 @@ const Animation101Screen = () => {
       <Animated.View
         style={{
           ...styles.purpleBox,
+          backgroundColor: colors.primary,
           opacity,
           transform: [{translateY: position}],
         }}
@@ -45,8 +50,9 @@ const Animation101Screen = () => {
           fadeIn(), startMoving(-100, 800);
         }}
         title="FadeIn"
+        color={colors.primary}
       />
-      <Button onPress={fadeOut} title="fadeOut" />
+      <Button onPress={fadeOut} title="fadeOut" color={colors.primary} />
     </View>
   );
 };
@@ -60,7 +66,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   purpleBox: {
-    backgroundColor: '#5856D6',
     width: 150,
     height: 150,
   },
