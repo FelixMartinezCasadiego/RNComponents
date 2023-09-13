@@ -32,7 +32,7 @@ export const darkTheme: ThemeState = {
     border: 'black',
     notification: 'teel',
   },
-  dividerColor: 'rgba(0,0,0,0.7)',
+  dividerColor: 'gray',
 };
 
 export const ThemeReducer = (
